@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard Thách Thức Ngành Lữ Hành</title>
+        <!-- Tải Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Tải Font Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            /* Sử dụng font Inter làm font chữ chính */
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+            /* CSS cho hiệu ứng mượt mà khi chuyển tab */
+            .tab-content {
+                transition: opacity 0.3s ease-in-out;
+            }
+        </style>
+    </head>
+    <body class="bg-slate-100 text-slate-800">
+
+        <!-- Header -->
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <h1 class="text-xl sm:text-2xl font-bold text-blue-700">Phân Tích Thách Thức Doanh Nghiệp Lữ Hành</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="bg-blue-700 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Nhận Diện "Nỗi Đau" Để Tăng Tốc</h2>
+                <p class="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+                    Một phân tích chuyên sâu về các rào cản đang kìm hãm sự phát triển của doanh nghiệp lữ hành hiện đại.
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="container mx-auto p-4 sm:p-6 lg:p-8 -mt-16">
+            
+            <!-- Tab Navigation -->
+            <!-- Thay đổi: Bỏ 'flex-wrap', thêm 'overflow-x-auto', 'whitespace-nowrap' cho các nút, và thêm padding ngang 'px-4' cho mobile -->
+            <nav class="flex overflow-x-auto sm:justify-center gap-2 sm:gap-4 mb-8 px-4 sm:px-0" aria-label="Các mảng nghiệp vụ" style="-ms-overflow-style: none; scrollbar-width: none;">
+                <!-- Nút điều khiển tab -->
+                <button data-target="content-sales" class="tab-btn bg-blue-600 text-white py-2 px-3 sm:py-3 sm:px-5 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 whitespace-nowrap">
+                    1. Kinh Doanh & Bán Hàng
+                </button>
+                <button data-target="content-ops" class="tab-btn bg-white text-blue-700 py-2 px-3 sm:py-3 sm:px-5 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 whitespace-nowrap">
+                    2. Vận Hành & Điều Hành
+                </button>
+                <button data-target="content-finance" class="tab-btn bg-white text-blue-700 py-2 px-3 sm:py-3 sm:px-5 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 whitespace-nowrap">
+                    3. Tài Chính & Kế Toán
+                </button>
+                <button data-target="content-marketing" class="tab-btn bg-white text-blue-700 py-2 px-3 sm:py-3 sm:px-5 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 whitespace-nowrap">
+                    4. Marketing & Sản Phẩm
+                </button>
+                <button data-target="content-tech" class="tab-btn bg-white text-blue-700 py-2 px-3 sm:py-3 sm:px-5 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 whitespace-nowrap">
+                    5. Công Nghệ & Văn Hóa
+                </button>
+            </nav>
+
+            <!-- Tab Content Panels -->
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10">
+                
+                <!-- 1. Sales Content -->
+                <div id="content-sales" class="tab-content">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Vấn Đề Cốt Lõi: Kinh Doanh & Bán Hàng</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Painpoint Card 1.1 -->
+                        <div class="border border-red-200 bg-red-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Đồng hồ (tốc độ chậm) -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-red-800 mb-1">Báo giá thủ công, chậm chạp</h4>
+                                <p class="text-sm text-slate-700">Quy trình báo giá tour MICE/tour riêng mất vài giờ đến vài ngày (gọi nhà cung cấp, chờ báo giá, tổng hợp vào Excel). Trong khi chờ đợi, khách hàng đã có thể tự đặt dịch vụ tương tự trên OTA.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Hệ thống Quản lý giá (CPQ) kết nối API nhà cung cấp, cho phép nhân viên kinh doanh "kéo-thả" dịch vụ để ra báo giá tùy chỉnh trong vài phút.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 1.2 -->
+                        <div class="border border-yellow-200 bg-yellow-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Dữ liệu phân mảnh -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.124-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.124-1.283.356-1.857m0 0a3.001 3.001 0 015.288 0M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-yellow-800 mb-1">"Mù" chân dung khách hàng 360 độ</h4>
+                                <p class="text-sm text-slate-700">Dữ liệu "nhốt" trong các ốc đảo (silo). Khách đi tour Nhật (chi nhánh Hà Nội) khi hỏi tour Thái (chi nhánh HCM) thì nhân viên HCM không biết lịch sử, sở thích của khách. Mọi tương tác đều như "lần đầu tiên".</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Hệ thống CRM (Quản lý quan hệ khách hàng) hợp nhất, lưu trữ mọi lịch sử giao dịch, tương tác, khiếu nại của khách hàng trên toàn hệ thống.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 1.3 -->
+                        <div class="border border-orange-200 bg-orange-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Quản lý B2B -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-orange-800 mb-1">Quản lý đại lý B2B kém hiệu quả</h4>
+                                <p class="text-sm text-slate-700">Phụ thuộc vào Zalo, Email, quan hệ cá nhân. Không có cổng B2B tập trung để đại lý tự kiểm tra tồn kho (inventory), giá net, hoa hồng theo thời gian thực. Tốn nguồn lực hỗ trợ.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Xây dựng Cổng thông tin Đại lý (B2B Agent Portal) cho phép đại lý tự phục vụ: kiểm tra, đặt dịch vụ, và theo dõi công nợ/hoa hồng real-time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 1.4 -->
+                        <div class="border border-red-200 bg-red-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Rớt đơn hàng online -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-red-800 mb-1">Tỷ lệ rớt đơn hàng online cao</h4>
+                                <p class="text-sm text-slate-700">Website cứng nhắc, không thể tùy chỉnh (đổi hãng bay, nâng cấp khách sạn). Khách hàng buộc phải gọi điện cho nhân viên, tạo "điểm gãy" trong trải nghiệm mua hàng.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Tích hợp hệ thống đặt chỗ (Booking Engine) cho phép "đóng gói" linh hoạt (dynamic packaging), cho khách tự tùy chỉnh các thành phần của tour.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Operations Content -->
+                <div id="content-ops" class="tab-content hidden">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Vấn Đề Cốt Lõi: Vận Hành & Điều Hành</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Painpoint Card 2.1 -->
+                        <div class="border border-purple-200 bg-purple-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Excel -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-purple-800 mb-1">"Điều tour" bằng Excel và trí nhớ</h4>
+                                <p class="text-sm text-slate-700">Với hàng trăm đoàn mỗi ngày, việc phân bổ HDV, xe cộ... bằng file Excel khổng lồ và kinh nghiệm cá nhân dẫn đến tối ưu kém, sai sót (trùng lặp, quên dịch vụ), chi phí cao.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Hệ thống Quản lý Vận hành Tour (TMS) với lịch biểu trực quan, tự động gợi ý phân bổ nguồn lực (HDV, xe) tối ưu và cảnh báo xung đột.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 2.2 -->
+                        <div class="border border-red-200 bg-red-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Cảnh báo -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-red-800 mb-1">Quản lý rủi ro thụ động</h4>
+                                <p class="text-sm text-slate-700">Chỉ biết sự cố (delay, lạc khách, tai nạn, dịch vụ NCC kém) khi HDV hoặc khách gọi về phàn nàn. Không có "tháp điều khiển" để giám sát và xử lý khủng hoảng chủ động.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Xây dựng "Tháp điều khiển" (Control Tower) giám sát vị trí đoàn (qua App HDV), nhận cảnh báo sớm và chủ động điều phối xử lý khủng hoảng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 2.3 -->
+                        <div class="border border-gray-200 bg-gray-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Dữ liệu chết -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Dữ liệu "chết" tại điểm đến</h4>
+                                <p class="text-sm text-slate-700">Phản hồi của HDV (nhà hàng kém, điểm tham quan quá tải...) chỉ nằm trên báo cáo giấy cuối tour (hoặc tệ hơn là không được ghi lại) và không bao giờ được đưa vào hệ thống để phân tích.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Ứng dụng di động cho HDV để gửi báo cáo điện tử, chấm điểm nhà cung cấp, và ghi nhận phản hồi của khách ngay tại chỗ, đẩy dữ liệu về hệ thống real-time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Finance Content -->
+                <div id="content-finance" class="tab-content hidden">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Vấn Đề Cốt Lõi: Tài Chính & Kế Toán</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Painpoint Card 3.1 -->
+                        <div class="border border-red-200 bg-red-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Thanh toán -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8C9.79 8 8 9.79 8 12s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 8c-1.11 0-2.08-.402-2.599-1M12 16c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-red-800 mb-1">Cơn ác mộng thanh toán nhà cung cấp</h4>
+                                <p class="text-sm text-slate-700">Quy trình hoàn toàn thủ công: nhận hóa đơn giấy/ảnh, kế toán nhập liệu, làm lệnh chuyển khoản cho hàng ngàn NCC nhỏ lẻ. Tốn nhân lực, rủi ro sai sót cao.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Tự động hóa Kế toán Phải trả (AP Automation) dùng OCR để quét hóa đơn, tự động tạo lệnh thanh toán và đối soát với ngân hàng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 3.2 -->
+                        <div class="border border-orange-200 bg-orange-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Đối soát -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-orange-800 mb-1">Đối soát công nợ B2B chậm trễ</h4>
+                                <p class="text-sm text-slate-700">Đối soát hoa hồng và thanh toán cho hàng ngàn đại lý B2B thủ công, tốn thời gian, dễ gây tranh cãi và làm giảm sự hài lòng, tin tưởng của đối tác.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Tự động hóa tính hoa hồng B2B dựa trên dữ liệu booking và tích hợp vào B2B Portal để đại lý tự đối soát minh bạch.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 3.3 -->
+                        <div class="border border-yellow-200 bg-yellow-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Biểu đồ (tài chính) -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-yellow-800 mb-1">Thiếu bức tranh tài chính real-time</h4>
+                                <p class="text-sm text-slate-700">Dữ liệu không liên thông. Lãnh đạo không biết Lãi/Lỗ (P&L) thực tế của một tour ngay lập tức, phải chờ kế toán tổng hợp cuối tháng. Ra quyết định chậm.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Hệ thống ERP (Hoạch định nguồn lực doanh nghiệp) hợp nhất dữ liệu từ Sales, Ops, Tài chính để cung cấp dashboard P&L theo thời gian thực.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Marketing Content -->
+                <div id="content-marketing" class="tab-content hidden">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Vấn Đề Cốt Lõi: Marketing & Sản Phẩm</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Painpoint Card 4.1 -->
+                        <div class="border border-indigo-200 bg-indigo-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Target -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-indigo-800 mb-1">Marketing "bắn súng hoa cải"</h4>
+                                <p class="text-sm text-slate-700">Chiến dịch Email/SMS "gửi cho tất cả". Khách vừa đi tour Nhật về tuần trước có thể nhận được email quảng cáo đúng tour Nhật mà họ vừa đi. Gây lãng phí và làm phiền khách hàng.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Sử dụng dữ liệu từ CRM để phân khúc khách hàng (ví dụ: "khách đi Đông Nam Á", "khách VIP") và gửi chiến dịch marketing cá nhân hóa, đúng đối tượng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 4.2 -->
+                        <div class="border border-cyan-200 bg-cyan-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Vòng lặp -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9M4 12v5h.582m15.356 2A8.001 8.001 0 004.582 17M12 8c0-1.105.895-2 2-2s2 .895 2 2-1.343 4-3 5.5s-3 1.5-3 0"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-800 mb-1">Vòng lặp phát triển sản phẩm chậm</h4>
+                                <p class="text-sm text-slate-700">Thiết kế tour mới dựa trên "cảm tính". Mất cả mùa du lịch để thu thập phản hồi của khách (qua phiếu khảo sát giấy) rồi mới phân tích (nếu có) để cải tiến cho mùa sau.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Số hóa quy trình thu thập phản hồi (email, QR code) để dữ liệu được tập trung ngay lập tức, giúp bộ phận sản phẩm phân tích và cải tiến nhanh chóng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 4.3 -->
+                        <div class="border border-gray-200 bg-gray-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Kênh truyền thống -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Đo lường quảng cáo số không hiệu quả</h4>
+                                <p class="text-sm text-slate-700">Chi phí quảng cáo số (Google, Facebook) đắt đỏ nhưng không đo lường được tỷ lệ chuyển đổi (ROI) chính xác do không liên thông với hệ thống booking và CRM.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Triển khai theo dõi chuyển đổi (conversion tracking) end-to-end, liên kết dữ liệu từ click quảng cáo đến booking thành công trong hệ thống.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Tech/Culture Content -->
+                <div id="content-tech" class="tab-content hidden">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Vấn Đề Cốt Lõi: Công Nghệ & Văn Hóa</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Painpoint Card 5.1 -->
+                        <div class="border border-red-200 bg-red-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Hệ thống chắp vá -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-red-800 mb-1">Hệ thống công nghệ chắp vá</h4>
+                                <p class="text-sm text-slate-700">Nhiều phần mềm (kế toán MISA, CRM tự viết, website) không "nói chuyện" với nhau, tạo ra "ốc đảo" dữ liệu. Nhân viên phải nhập liệu lặp đi lặp lại trên nhiều hệ thống.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Triển khai một nền tảng hợp nhất (hoặc ERP chuyên ngành du lịch) đóng vai trò "xương sống", hoặc sử dụng các công cụ middleware để kết nối các hệ thống rời rạc.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Painpoint Card 5.2 -->
+                        <div class="border border-orange-200 bg-orange-50 rounded-xl p-6 flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
+                                <!-- Icon: Ngại thay đổi -->
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-orange-800 mb-1">Văn hóa "ngại thay đổi"</h4>
+                                <p class="text-sm text-slate-700">Nhân viên kỳ cựu đã quen với quy trình trên Excel, giấy tờ. Họ cảm thấy không thoải mái, thậm chí bị đe dọa khi phải học hệ thống mới. Khó tuyển dụng nhân tài số.</p>
+                                <div class="mt-4 border-t border-green-300 pt-3">
+                                    <h5 class="text-sm font-semibold text-green-800 mb-1">Giải pháp đề xuất:</h5>
+                                    <p class="text-sm text-slate-700">
+                                        Xây dựng kế hoạch Quản lý Thay đổi (Change Management) bài bản: Lãnh đạo cam kết, truyền thông rõ lợi ích, và đào tạo chuyên sâu theo từng vai trò.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center text-sm text-slate-500 py-8 px-4">
+            &copy; 2025 | Bản trình bày được cá nhân hóa cho buổi thảo luận.
+        </footer>
+
+        <!-- JavaScript để xử lý Tab -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const tabButtons = document.querySelectorAll('.tab-btn');
+                const tabContents = document.querySelectorAll('.tab-content');
+
+                // Hàm để hiển thị tab
+                function showTab(targetId) {
+                    // Ẩn tất cả nội dung
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                        content.style.opacity = 0;
+                    });
+
+                    // Bỏ trạng thái "active" của tất cả các nút
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('bg-white', 'text-blue-700');
+                    });
+
+                    // Lấy tab và nút mục tiêu
+                    const targetContent = document.getElementById(targetId);
+                    const targetButton = document.querySelector(`[data-target="${targetId}"]`);
+
+                    // Hiển thị tab mục tiêu
+                    if (targetContent) {
+                        targetContent.classList.remove('hidden');
+                        // Thêm một chút delay để CSS transition có tác dụng
+                        setTimeout(() => {
+                            targetContent.style.opacity = 1;
+                        }, 50);
+                    }
+                    
+                    // Đánh dấu nút mục tiêu là "active"
+                    if (targetButton) {
+                        targetButton.classList.add('bg-blue-600', 'text-white');
+                        targetButton.classList.remove('bg-white', 'text-blue-700');
+                    }
+                }
+
+                // Thêm sự kiện click cho các nút
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        showTab(this.dataset.target);
+                    });
+                });
+
+                // Hiển thị tab đầu tiên khi tải trang
+                showTab('content-sales');
+            });
+        </script>
+
+    </body>
+    </html>
